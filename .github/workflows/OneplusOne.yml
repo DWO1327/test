@@ -23,3 +23,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: calculateOneplusOne
         run: expr 1 + 1 >>Result.txt
+        
+      - name: ShowResult
+        run: cat Result.txt
