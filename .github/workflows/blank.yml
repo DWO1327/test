@@ -27,4 +27,7 @@ jobs:
       - name: build and publish container 
         run: |
             chmod +x ./build.sh
-            ./build.sh build-$GITHUB_RUN_NUMBER idi2019.azurecr.io
+            ./build.sh
+            docker tag dwo1327 idi2019.azurecr.io/dwo1327
+            docker push idi2019.azurecr.io/dwo1327
+
