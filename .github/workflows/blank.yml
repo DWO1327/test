@@ -24,7 +24,5 @@ jobs:
           login-server: idi2019.azurecr.io 
           username: ${{ secrets.IDI2019_REGISTRY_USERNAME }} 
           password: ${{ secrets.IDI2019_REGISTRY_PASSWORD }} 
-      - name: build project 
-        run: make 
       - name: build and publish container 
         run: ./build.sh
