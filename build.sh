@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker build -t dwo1327 .
+docker build -t dwo1327 .

@@ -25,4 +25,6 @@ jobs:
           username: ${{ secrets.IDI2019_REGISTRY_USERNAME }} 
           password: ${{ secrets.IDI2019_REGISTRY_PASSWORD }} 
       - name: build and publish container 
-        run: ./build.sh
+        run: |
+            chmod +x ./build.sh
+            ./build.sh
