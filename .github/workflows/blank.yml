@@ -27,4 +27,4 @@ jobs:
       - name: build project 
         run: make 
       - name: build and publish container 
-        run: ./build.sh
+        run: ./build.sh build-$GITHUB_RUN_NUMBER idi2019.azurecr.io
