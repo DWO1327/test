@@ -31,3 +31,18 @@ jobs:
       - uses: actions/setup-dotnet@v1 
         with: 
           dotnet-version: '5.0.x'
+      - name: containerBuild
+      
+      - name: build-test-and-publish-container: 
+        runs-on: ubuntu-latest 
+        steps: 
+          - uses: actions/checkout@v2 
+          - uses: azure/docker-login@v1 
+            with: 
+              login-server: idi2019.azurecr.io 
+              username: ${{ secrets.IDI2019_REGISTRY_USERNAME }} 
+              password: ${{ secrets.IDI2019_REGISTRY_PASSWORD }} 
+          - name: build project 
+            run: make 
+          - name: build and publish container 
+            run: ./build.sh build-$GITHUB_RUN_NUMBER idi2019.azurecr.io
