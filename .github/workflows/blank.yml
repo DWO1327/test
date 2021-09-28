@@ -27,4 +27,4 @@ jobs:
       - name: build and publish container 
         run: |
             chmod +x ./build.sh
-            ./build.sh
+            ./build.sh build-$GITHUB_RUN_NUMBER idi2019.azurecr.io
