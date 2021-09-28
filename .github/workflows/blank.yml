@@ -27,8 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: build
-        run: dotnet publish -o ../containerbuild/release
-        working-directory: ./AWebApp
+        run: dotnet build
       - uses: actions/setup-dotnet@v1 
         with: 
           dotnet-version: '5.0.x'
